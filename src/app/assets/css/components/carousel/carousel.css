@@ -1,0 +1,27 @@
+.carousel-title {
+  padding: 0;
+}
+
+.backImage-1 {
+  background-color: #060608;
+  background-image: url(../../../../assets/images/carousel/carousel1.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.backImage-2 {
+  background-color: #50505a;
+  background-image: url(../../../../assets/images/carousel/carousel2.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.title-banner {
+  height: 1pc;
+  padding-bottom: 10px;
+}
+
+.carousel-title p {
+  padding-left: 20px;
+  font-size: 15px;
+}

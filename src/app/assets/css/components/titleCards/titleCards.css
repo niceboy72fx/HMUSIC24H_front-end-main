@@ -1,0 +1,34 @@
+.cardTitle {
+  width: 13pc;
+  height: 24pc;
+  border-radius: 8px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.cardTitle-content {
+  width: 13pc;
+  height: 12pc;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardTitle-content span {
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+.content-text {
+  padding: 15px;
+}
+
+.cardTitle-content:hover {
+  height: 18pc;
+  transition: 1s;
+}
