@@ -1,20 +1,28 @@
-import { call, put, takeEvery } from "redux-saga/effects";
-import { ActionConstant } from "../../../constant/common";
-import { FetchGetAllMusic } from "../../../utils/api/apiServices";
-import {
-  GetListMusic,
-  GetListMusicFailed,
-  GetListMusicSuccess,
-} from "../../action/common";
+import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { ActionConstant, ActionGet50Music } from "../../../constant/common";
+import { Fetch50Music, FetchGetAllMusic } from "../../../utils/api/apiServices";
+import { GetListMusicSuccess, GetTopSuccess } from "../../action/common";
 
 export function* GetListDataMusic() {
-  //bug
-  const listMusic = yield call(() => FetchGetAllMusic());
-  //-------------
-  yield put(GetListMusicSuccess(listMusic?.data));
+  try {
+    const listMusic = yield call(() => FetchGetAllMusic());
+    yield put(GetListMusicSuccess(listMusic?.data));
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+export function* GetTopMusic() {
+  try {
+    const listMusic = yield call(() => Fetch50Music());
+    yield put(GetTopSuccess(listMusic?.data));
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 //----------------------------------------------------------------
 export function* WatchListMusic() {
-  yield takeEvery(ActionConstant.GETALLMUSICACTION, GetListDataMusic);
+  yield takeLatest(ActionConstant.GETALLMUSICACTION, GetListDataMusic);
+  yield takeLatest(ActionGet50Music.GETALLTOPMUSICACTION, GetTopMusic);
 }

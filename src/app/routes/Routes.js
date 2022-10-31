@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { ActionConstant } from "../constant/common";
+import { ActionConstant, ActionGet50Music } from "../constant/common";
 import DefaultLayoutMusicPage from "../layout/defaultLayoutMusicPage";
 import AlbumMusicPage from "../page/albumMusicPage";
 import CountryMusicPage from "../page/countryMusicPage";
@@ -18,7 +18,11 @@ const MusicRoute = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({ type: ActionConstant.GETALLMUSICACTION });
+    dispatch({ type: ActionGet50Music.GETALLTOPMUSICACTION });
   }, []);
+
+  const data = useSelector((state) => state.GetTop50Music.topMusic);
+  console.log(data);
 
   //---------debug
   const tempData = [];
@@ -37,7 +41,7 @@ const MusicRoute = () => {
           <Route path="country/korea" element={<KoreaPage />} />
           <Route path="country/us-uk" element={<UsPage />} />
           <Route path="country/japanese" element={<JapanPage />} />
-          <Route path="top50" element={<Top50MusicPage />} />
+          <Route path="top50" element={<Top50MusicPage dataTop50={data} />} />
           <Route path="typeMusic" element={<TypeMusicPage />} />
           <Route path="album" element={<AlbumMusicPage />} />
         </Route>

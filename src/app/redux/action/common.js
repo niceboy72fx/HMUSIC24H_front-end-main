@@ -1,4 +1,4 @@
-import { ActionConstant } from "../../constant/common";
+import { ActionConstant, ActionGet50Music } from "../../constant/common";
 
 export const GetListMusic = () => {
   return {
@@ -24,3 +24,23 @@ export function PlayMusic() {
     type: ActionConstant.PLAYMUSICACTION,
   };
 }
+
+//----top 50 music ------params--------------
+export const Top50MusicAction = () => {
+  return {
+    type: ActionGet50Music.GETALLTOPMUSICACTION,
+  };
+};
+
+export const GetTopSuccess = (params) => {
+  return {
+    type: ActionGet50Music.GETTOPSUCCESS,
+    payloads: params,
+  };
+};
+
+export const GetTopFailure = () => {
+  return {
+    type: ActionGet50Music.GETTOPFAIL,
+  };
+};

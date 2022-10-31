@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { GetSearchData } from "../redux/action/searchAction";
 import { ActionConstant } from "../constant/common";
 import { Footers } from "../components/layoutComponents/footer";
-import { setKeyMenuAction } from "../redux/action/keyMenuAction";
 const { Header, Footer, Sider } = Layout;
 function getItem(label, key, icon) {
   return {

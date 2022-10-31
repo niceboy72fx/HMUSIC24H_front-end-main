@@ -1,11 +1,12 @@
 import { combineReducers } from "redux";
-import { GetListMusicReducer } from "./getListMusic";
+import { GetListMusicReducer, GetTop50Music } from "./getListMusic";
 import { GetSearchReducer } from "./searchReducer";
-import keyMenuReducer from "./keyMenuReducer";
+
 const RootReducer = combineReducers({
+  //------------Mains------------
   GetListMusicReducer,
   GetSearchReducer,
-  //------------Mains------------
-  keyMenuReducer,
+  //------------top50------------
+  GetTop50Music,
 });
 export default RootReducer;
