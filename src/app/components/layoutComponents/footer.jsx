@@ -43,7 +43,11 @@ export const Footers = ({ data }) => {
         <img
           src={songImage}
           alt={songs?.musicName}
-          className="w-24 h-24 rounded-full"
+          className="object-cover bg-black rounded-full "
+          style={{
+            width: "100px",
+            height: "100px",
+          }}
         />
         <div className=" p-4 w-full h-24 ">
           <p className="text-xl font-bold mb-0 truncate">{songs?.musicName}</p>

@@ -24,7 +24,7 @@ export const ListMusic = ({ data }) => {
               {slice.indexOf(tempData) + 1}
             </div>
             <div className="cell-title flex items-center text-left pl-10 ">
-              <img src={tempData?.imagePath} className="w-14 h-14" />
+              <img src={tempData?.imagePath} className="w-14 h-14 rounded-xl" />
               <div className="pl-7 title-name">
                 <p className="m-0 font-bold text-xl truncate w-56">
                   {tempData?.musicName}

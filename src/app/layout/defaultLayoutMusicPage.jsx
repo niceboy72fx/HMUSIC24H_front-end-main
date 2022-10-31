@@ -30,7 +30,7 @@ const items = [
 
 const DefaultLayoutMusicPage = ({ random }) => {
   // const [loading, setLoading] = useState(true);
-  const { isLoading } = useLoading(true, 1800);
+
   const [changePage, setChangePage] = useState("1");
   const [isRerender, setIsRerender] = useState(true);
   const navigate = useNavigate();
@@ -174,15 +174,14 @@ const DefaultLayoutMusicPage = ({ random }) => {
                 maxHeight: "10pc",
               }}
             >
-              {isLoading && <LoadingLoad />}
-              {!isLoading && (
-                <Outlet className="transition ease-in-out delay-1800" />
-              )}
+              <Outlet className="transition ease-in-out delay-1800" />
             </div>
           </Content>
         </Layout>
       </Layout>
+
       <Footers data={musicData} />
+
       <style>
         {`
            .ant-select-selection-search {
