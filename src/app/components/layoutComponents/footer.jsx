@@ -1,10 +1,7 @@
-import { ActionConstant } from "../../constant/common";
 import AudioPlayer from "react-h5-audio-player";
-import { useDispatch, useSelector } from "react-redux";
 import "react-h5-audio-player/lib/styles.css";
 import { Layout } from "antd";
 import React, { useState } from "react";
-import { useEffect } from "react";
 import imageSong from "../../assets/images/logo/logo-music.jpg";
 const { Footer } = Layout;
 

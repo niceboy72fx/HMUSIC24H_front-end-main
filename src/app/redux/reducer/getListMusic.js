@@ -1,9 +1,18 @@
-import { ActionConstant, ActionGet50Music } from "../../constant/common";
+import {
+  ActionConstant,
+  ActionGet50Music,
+  ActionGetCountryMusic,
+} from "../../constant/common";
 
 //----------------------------------------------------------------
 const initialState = {
   provider: {},
   topMusic: {},
+  country: {
+    vietnam: {},
+    korea: {},
+    us: {},
+  },
 };
 
 export const GetListMusicReducer = (state = initialState, action) => {
@@ -28,6 +37,25 @@ export const GetTop50Music = (state = initialState, action) => {
     case ActionGet50Music.GETTOPSUCCESS:
       return { ...state, topMusic: action.payloads };
     case ActionGet50Music.GETTOPFAIL:
+      return { ...state };
+    default:
+      return state;
+  }
+};
+
+///--------------------------------
+
+export const GetCountryMusic = (state = initialState.country, action) => {
+  switch (action.type) {
+    case ActionGetCountryMusic.GETCOUNTRYATIONS:
+      return { ...state, country: action.payload };
+    case ActionGetCountryMusic.GETVIETNAMESESUCCESS:
+      return { ...state, vietnam: action.payload };
+    case ActionGetCountryMusic.GETKOREASUCCESS:
+      return { ...state, korea: action.payload };
+    case ActionGetCountryMusic.GETUSUCCESS:
+      return { ...state, us: action.payload };
+    case ActionGetCountryMusic.GETCOUNTRYFAILED:
       return { ...state };
     default:
       return state;

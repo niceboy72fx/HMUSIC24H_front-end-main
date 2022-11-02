@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
-import { GetListMusicReducer, GetTop50Music } from "./getListMusic";
+import {
+  GetListMusicReducer,
+  GetTop50Music,
+  GetCountryMusic,
+} from "./getListMusic";
 import { GetSearchReducer } from "./searchReducer";
 
 const RootReducer = combineReducers({
@@ -8,5 +12,7 @@ const RootReducer = combineReducers({
   GetSearchReducer,
   //------------top50------------
   GetTop50Music,
+  //------------country------------
+  GetCountryMusic,
 });
 export default RootReducer;

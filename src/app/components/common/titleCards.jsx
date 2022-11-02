@@ -1,20 +1,11 @@
 import React from "react";
 import "../../assets/css/components/titleCards/titleCards.css";
-export const TitleCard = ({ images }) => {
-  const image = {
-    backgroundImage: `url("../../assets/images/card/vietnamCard")`,
-  };
-
+export const TitleCard = ({ images, nameTitle, title }) => {
   return (
-    <div
-      className="cardTitle"
-      style={{
-        backgroundImage: "url(../../assets/images/card/vietnamCard.png)",
-      }}
-    >
+    <div className="cardTitle" style={images}>
       <div className="cardTitle-content">
-        <span>Hello World</span>
-        <div className="content-text">Một trong các thuật ngữ đầu tiên kh</div>
+        <span>{nameTitle}</span>
+        <div className="content-text">{title}</div>
       </div>
     </div>
   );

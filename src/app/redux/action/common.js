@@ -1,4 +1,8 @@
-import { ActionConstant, ActionGet50Music } from "../../constant/common";
+import {
+  ActionConstant,
+  ActionGet50Music,
+  ActionGetCountryMusic,
+} from "../../constant/common";
 
 export const GetListMusic = () => {
   return {
@@ -42,5 +46,39 @@ export const GetTopSuccess = (params) => {
 export const GetTopFailure = () => {
   return {
     type: ActionGet50Music.GETTOPFAIL,
+  };
+};
+
+//---------countryMusicPage---------
+export const CountryMusicAction = () => {
+  return {
+    type: ActionGetCountryMusic.GETCOUNTRYATIONS,
+  };
+};
+
+export const GetVietNameseMusicSuccess = (params) => {
+  return {
+    type: ActionGetCountryMusic.GETVIETNAMESESUCCESS,
+    payload: params,
+  };
+};
+
+export const GetKoreanMusicSuccess = (params) => {
+  return {
+    type: ActionGetCountryMusic.GETKOREASUCCESS,
+    payload: params,
+  };
+};
+
+export const GetUSMusicSuccess = (params) => {
+  return {
+    type: ActionGetCountryMusic.GETUSUCCESS,
+    payload: params,
+  };
+};
+
+export const GetCountryMusicFailure = () => {
+  return {
+    type: ActionGetCountryMusic.GETCOUNTRYFAILED,
   };
 };
