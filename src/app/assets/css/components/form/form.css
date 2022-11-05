@@ -1,0 +1,56 @@
+.form {
+  width: 23pc;
+  height: 35pc;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
+}
+
+.form-input {
+  width: 20pc;
+}
+
+.input-group {
+  border-bottom: 1px solid white;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.input-password,
+.input-email {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.form-button button {
+  padding: 5px;
+  width: 10pc;
+  margin-top: 20px;
+  border: 3px solid white;
+}
+
+.form-register button {
+  width: fit-content;
+  padding: 5px;
+  border: 3px solid white;
+  margin-left: 10px;
+}
+
+.firebase-google,
+.firebase-facebook {
+  padding: 5px;
+  border: 3px solid white;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { Layout, Menu, Input, AutoComplete } from "antd";
+import { Layout, Menu } from "antd";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import useLoading from "../hook/useLoading";
-import LoadingLoad from "../components/loadingSpin";
 import "../assets/css/layout/defaultLayoutMusicPage.css";
 import "react-h5-audio-player/lib/styles.css";
 import { Content } from "antd/lib/layout/layout";
 import { useDispatch, useSelector } from "react-redux";
 import { GetSearchData } from "../redux/action/searchAction";
-import { ActionConstant } from "../constant/common";
 import { Footers } from "../components/layoutComponents/footer";
-const { Header, Footer, Sider } = Layout;
+import { Headers } from "../components/layoutComponents/header";
+const { Sider } = Layout;
 function getItem(label, key, icon) {
   return {
     label,
@@ -95,7 +93,10 @@ const DefaultLayoutMusicPage = ({ random }) => {
   };
 
   // //---------------------------------------------------------------------------------
-
+  const onClickSearch = () => {
+    setChangePage("2");
+  };
+  // //--------------------------------------------------------------------------------
   const handleData = (data) => {
     dispatch(GetSearchData(data));
   };
@@ -132,34 +133,7 @@ const DefaultLayoutMusicPage = ({ random }) => {
           </div>
         </Sider>
         <Layout>
-          <Header
-            className="site-layout-sub-header-background  "
-            style={{
-              padding: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "#181211",
-            }}
-          >
-            <div className="w-96 ">
-              <NavLink
-                to="/search"
-                onClick={() => {
-                  setChangePage("2");
-                }}
-              >
-                <Input.Group compact className="w-full rounded-xl">
-                  <AutoComplete
-                    className="w-full borber-none "
-                    placeholder="Tìm kiếm bài hát"
-                    options={[]}
-                    onChange={handleData}
-                  />
-                </Input.Group>
-              </NavLink>
-            </div>
-          </Header>
+          <Headers />
           <Content
             style={{
               padding: "16px",

@@ -13,6 +13,7 @@ import AlbumMusicPage from "../page/albumMusicPage";
 import CountryMusicPage from "../page/countryMusicPage";
 import FindMusicPage from "../page/findMusicPage";
 import HomeMusicsPage from "../page/homeMusicPage";
+import LoginPage from "../page/login&&signup/loginPage";
 import JapanPage from "../page/nestedPage/routePageCountry/japanPage";
 import KoreaPage from "../page/nestedPage/routePageCountry/koreaPage";
 import UsPage from "../page/nestedPage/routePageCountry/usPage";
@@ -21,7 +22,7 @@ import Top50MusicPage from "../page/top50MusicPage";
 import TypeMusicPage from "../page/typeMusicPage";
 
 const MusicRoute = () => {
-  const { isLoading } = useLoading(true, 4800);
+  const { isLoading } = useLoading(true, 10);
   //---------Dispatch---
   const dispatch = useDispatch();
   useEffect(() => {
@@ -77,6 +78,7 @@ const MusicRoute = () => {
             <Route path="typeMusic" element={<TypeMusicPage />} />
             <Route path="album" element={<AlbumMusicPage />} />
           </Route>
+          <Route path="login" element={<LoginPage />} />
         </Routes>
       )}
     </>
