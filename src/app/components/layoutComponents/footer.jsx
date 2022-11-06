@@ -53,7 +53,7 @@ export const Footers = ({ data }) => {
       </div>
       <div className="control-song w-3/4">
         <AudioPlayer
-          autoPlay={true}
+          autoPlay={false}
           autoPlayAfterSrcChange={true}
           authorPath={songs?.authorPath}
           className="w-full"

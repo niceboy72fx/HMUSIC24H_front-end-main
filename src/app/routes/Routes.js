@@ -9,6 +9,7 @@ import {
 } from "../constant/common";
 import useLoading from "../hook/useLoading";
 import DefaultLayoutMusicPage from "../layout/defaultLayoutMusicPage";
+import NotFound from "../page/404notFound";
 import AlbumMusicPage from "../page/albumMusicPage";
 import CountryMusicPage from "../page/countryMusicPage";
 import FindMusicPage from "../page/findMusicPage";
@@ -79,6 +80,7 @@ const MusicRoute = () => {
             <Route path="album" element={<AlbumMusicPage />} />
           </Route>
           <Route path="login" element={<LoginPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       )}
     </>
