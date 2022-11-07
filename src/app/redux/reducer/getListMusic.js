@@ -7,6 +7,7 @@ import {
 //----------------------------------------------------------------
 const initialState = {
   provider: {},
+  randomMusic: {},
   topMusic: {},
   country: {
     vietnam: {},
@@ -19,8 +20,12 @@ export const GetListMusicReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionConstant.GETALLMUSICACTION:
       return { ...state, provider: action.payload };
+    case ActionConstant.GETRANDOMMUSICLISTACTION:
+      return { ...state, randomMusic: action.payload };
     case ActionConstant.GETSUCCESS:
       return { ...state, provider: action.payload };
+    case ActionConstant.GETLISTSUCCESS:
+      return { ...state, randomMusic: action.payload };
     case ActionConstant.GETFAIL:
       return { ...state };
     default:

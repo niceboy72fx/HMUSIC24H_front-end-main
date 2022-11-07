@@ -29,7 +29,7 @@ export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
     }
   };
   return (
-    <div className="ml-5 mr-5 pl-5 pr-5 flex ">
+    <div className="ml-5 mr-5 pl-5 pr-5 flex  ">
       <div className="Card shadow-2xl ">
         <div className="Card-image">
           <img src={image} title="" />
@@ -41,7 +41,7 @@ export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
             </div>
           </div>
         </div>
-        <div className="Card-title">
+        <div className="Card-title ">
           <div className="title-info p-5">
             <div className="info-name text-left text-lg font-bold truncate ">
               {musicName}

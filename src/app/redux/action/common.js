@@ -17,6 +17,13 @@ export const GetListMusicSuccess = (params) => {
   };
 };
 
+export const GetRandomMusicList = (params) => {
+  return {
+    type: ActionConstant.GETRANDOMMUSICLISTACTION,
+    payload: params,
+  };
+};
+
 export function GetListMusicFailed() {
   return {
     type: ActionConstant.GETFAIL,

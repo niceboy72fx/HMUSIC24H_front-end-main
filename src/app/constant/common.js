@@ -1,17 +1,19 @@
 export const ApiConstants = {
-  GETALLMUSICAPI: "http://localhost:8080/allmusic",
+  GETALLMUSICAPI: "http://localhost:8081/allmusic",
   //top50 music
-  GETTOP50MUSICAPI: "http://localhost:8080/top50",
+  GETTOP50MUSICAPI: "http://localhost:8081/top50",
   //COUNTRY
-  GETVIETNAMMUSICAPI: "http://localhost:8080/vietnam",
-  GETKOREAMUSICAPI: "http://localhost:8080/korea",
-  GETUSMUSICAPI: "http://localhost:8080/us",
+  GETVIETNAMMUSICAPI: "http://localhost:8081/vietnam",
+  GETKOREAMUSICAPI: "http://localhost:8081/korea",
+  GETUSMUSICAPI: "http://localhost:8081/us",
   GETJAPANUSICAPI: "",
   //type musci
 };
 
 export const ActionConstant = {
   GETALLMUSICACTION: "GETALLMUSICACTION",
+  GETRANDOMMUSICLISTACTION: "GETRANDOMMUSICLISTACTION",
+  GETLISTSUCCESS: "GETLISTSUCCESS",
   GETSUCCESS: "GETSUCCESS",
   GETFAIL: "GETFAIL",
   PLAYMUSICACTION: "PLAYMUSICACTION",
