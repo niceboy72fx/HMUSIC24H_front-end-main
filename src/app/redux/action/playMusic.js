@@ -7,8 +7,16 @@ export const MusicList = (params) => {
   };
 };
 
-export const PlayMusic = () => {
+export const PlayMusic = (idMusic) => {
   return {
     type: ActionConstant.PLAYMUSICACTION,
+    payloads: idMusic,
+  };
+};
+
+export const PlayListMusic = (paramsListMusic) => {
+  return {
+    type: ActionConstant.PLAYLISTMUSICACTION,
+    payloads: paramsListMusic,
   };
 };

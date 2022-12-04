@@ -65,6 +65,12 @@ const DefaultLayoutMusicPage = ({ random }) => {
 
   ////------------------------------------------------------------------------
 
+  const changeListMusic = useSelector(
+    (state) => state.GetListChangeReducer.state
+  );
+  console.log(changeListMusic);
+
+  ////------------------------------------------------------------------------
   const getCurruntPath = () => {
     var key = "-1";
     var path = window.location.pathname.split("/");

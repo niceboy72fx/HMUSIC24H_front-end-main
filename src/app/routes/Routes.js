@@ -23,7 +23,7 @@ import Top50MusicPage from "../page/top50MusicPage";
 import TypeMusicPage from "../page/typeMusicPage";
 
 const MusicRoute = () => {
-  const { isLoading } = useLoading(true, 10);
+  const { isLoading } = useLoading(true, 4700);
   //---------Dispatch---
   const dispatch = useDispatch();
   useEffect(() => {

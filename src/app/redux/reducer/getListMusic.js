@@ -16,6 +16,10 @@ const initialState = {
   },
 };
 
+const listMusicChange = {};
+
+const musicChange = {};
+
 export const GetListMusicReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionConstant.GETALLMUSICACTION:
@@ -66,3 +70,15 @@ export const GetCountryMusic = (state = initialState.country, action) => {
       return state;
   }
 };
+// ---------------------CHANGE LIST MUSIC REDUCER --------------------
+
+export const GetListChangeReducer = (state = listMusicChange, action) => {
+  switch (action.type) {
+    case ActionConstant.PLAYLISTMUSICACTION:
+      return { ...state, state: action.payloads };
+    default:
+      return state;
+  }
+};
+
+export const SelectMusicReducer = (state = musicChange, action) => {};

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MusicCard from "./musicCard";
+import { useSelector } from "react-redux";
 export const CommonsSlider = ({ props }) => {
   const settings = {
     infinite: true,
@@ -40,6 +41,7 @@ export const CommonsSlider = ({ props }) => {
     <Slider className="p-5  flex  w-full " {...settings}>
       {props.map((state) => (
         <MusicCard
+          clickPlayId={state.id}
           musicName={state.musicName}
           authorPath={state.authorPath}
           image={state.imagePath}

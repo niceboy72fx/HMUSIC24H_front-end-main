@@ -21,6 +21,7 @@ export const ActionConstant = {
   COUNTING: "COUNTING",
   SEARCH: "SEARCH",
   SET_KEY_MENU: "SET_KEY_MENU",
+  PLAYLISTMUSICACTION: "PLAYLISTMUSICACTION",
 };
 
 export const ActionGet50Music = {
@@ -35,4 +36,9 @@ export const ActionGetCountryMusic = {
   GETUSUCCESS: "GETUSUCCESS",
   GETKOREASUCCESS: "GETKOREASUCCESS",
   GETCOUNTRYFAILED: "GETCOUNTRYFAILED",
+};
+
+export const ActionFlag = {
+  TRUEACTION: "TRUEACTION",
+  FALSEACTION: "FALSEACTION",
 };

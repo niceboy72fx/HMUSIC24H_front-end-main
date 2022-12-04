@@ -5,7 +5,7 @@ import useLoading from "./app/hook/useLoading";
 import LoadingSpin from "./app/components/loadingSpin";
 
 function App() {
-  const { isLoading } = useLoading(true, 4800);
+  const { isLoading } = useLoading(true, 100);
   return (
     <div className="App">
       {isLoading && <LoadingSpin />}

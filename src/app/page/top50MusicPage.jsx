@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { ListMusic } from "../components/common/List/listMusic";
 const Top50MusicPage = ({ dataTop50 }) => {
   const { data } = dataTop50;
-  console.log(data);
   return (
     <div className=" transition ease-in-out delay-1800 text-white">
       <div>

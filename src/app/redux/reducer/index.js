@@ -3,10 +3,14 @@ import {
   GetListMusicReducer,
   GetTop50Music,
   GetCountryMusic,
+  GetListChangeReducer,
 } from "./getListMusic";
 import { GetSearchReducer } from "./searchReducer";
-
+import { flagReducer } from "./flagReducer";
+import { PlayMusicCard } from "./playMusicReducer";
 const RootReducer = combineReducers({
+  //------------Dispatch Change Music------------
+  GetListChangeReducer,
   //------------Mains------------
   GetListMusicReducer,
   GetSearchReducer,
@@ -14,5 +18,9 @@ const RootReducer = combineReducers({
   GetTop50Music,
   //------------country------------
   GetCountryMusic,
+  //------------Flags------------
+  flagReducer,
+  //------------PlayMusicCard------------
+  PlayMusicCard,
 });
 export default RootReducer;

@@ -6,7 +6,6 @@ const HomeMusicsPage = ({ props }) => {
   return (
     <div className=" transition ease-in-out delay-1800 text-white">
       <Carousels />
-
       <div>
         <span className="text-4xl font-bold">Có thể bạn muốn nghe </span>
         <ListennerWant props={props} />

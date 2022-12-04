@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../assets/css/components/musicCard/musicCard.css";
 import {
   ThreeDotsVertical,
@@ -6,8 +6,15 @@ import {
   HeartFill,
   PauseCircle,
 } from "react-bootstrap-icons";
+import { useDispatch } from "react-redux";
 import "../../assets/css/components/antd.css";
-export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
+import { PlayMusic } from "../../redux/action/playMusic";
+export default function MusicCard({
+  image,
+  musicName,
+  authorPath,
+  clickPlayId,
+}) {
   const [play, setPlay] = useState(<PlayCircle className="text-6xl p-2" />);
   const [playCount, setPlayCount] = useState(0);
   const [turnOffHover, setTurnOffHover] = useState({});
@@ -16,11 +23,14 @@ export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
     transition: 1,
   };
 
+  const dispatch = useDispatch();
+
   const changePlay = () => {
     if (playCount == 0) {
       setPlay(<PauseCircle className="text-6xl p-2" />);
       setPlayCount(playCount + 1);
       setTurnOffHover(styleHover);
+      dispatch(PlayMusic(clickPlayId));
     }
     if (playCount == 1) {
       setPlay(<PlayCircle className="text-6xl p-2" />);
@@ -28,6 +38,7 @@ export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
       setTurnOffHover({});
     }
   };
+
   return (
     <div className="ml-5 mr-5 pl-5 pr-5 flex  ">
       <div className="Card shadow-2xl ">
@@ -53,5 +64,3 @@ export default function MusicCard({ image, musicName, authorPath, clickPlay }) {
     </div>
   );
 }
-
-//   state.authorPath
